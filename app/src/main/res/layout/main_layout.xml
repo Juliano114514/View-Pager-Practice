@@ -30,11 +30,17 @@
     android:layout_margin="5dp"
     android:text="ViewPager加载Fragment和底部导航"/>
 
-    <Button
-      android:id="@+id/load_fragment_navi2"
-      android:layout_width="match_parent"
-      android:layout_height="60dp"
-      android:layout_margin="5dp"
-      android:text="ViewPager加载Fragment和navigationView"/>
+  <Button
+    android:id="@+id/load_fragment_navi2"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="5dp"
+    android:text="ViewPager加载Fragment和navigationView"/>
 
+  <Button
+    android:id="@+id/load_tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="5dp"
+    android:text="ViewPager加载TabLayout"/>
 </LinearLayout>

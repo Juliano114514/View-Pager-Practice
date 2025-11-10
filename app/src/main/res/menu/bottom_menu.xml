@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
   <item
     android:id="@+id/menu_home"
-    android:icon="@drawable/ic_launcher_foreground"
+    android:icon="@drawable/outline_android_24"
     android:title="首页"
     />
 
     <item
       android:id="@+id/menu_list"
-      android:icon="@drawable/ic_launcher_foreground"
+      android:icon="@drawable/outline_android_24"
       android:title="列表"
       />
 
     <item
       android:id="@+id/menu_setting"
-      android:icon="@drawable/ic_launcher_foreground"
+      android:icon="@drawable/outline_android_24"
       android:title="设置"
       />
 </menu>

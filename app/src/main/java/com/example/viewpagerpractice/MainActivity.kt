@@ -8,6 +8,7 @@ import com.example.viewpagerpractice.viewpager.ViewPagerFragmentActivity
 import com.example.viewpagerpractice.viewpager.ViewPagerActivity
 import com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity
 import com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity2
+import com.example.viewpagerpractice.viewpager.ViewPagerTabLayoutActivity
 
 class MainActivity: AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class MainActivity: AppCompatActivity() {
   private lateinit var toFragmentButton: Button
   private lateinit var toFragmentNaviButton: Button
   private lateinit var toFragmentNaviButton2: Button
+  private lateinit var toTabLayoutButton: Button
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -28,6 +30,7 @@ class MainActivity: AppCompatActivity() {
     toFragmentButton = findViewById(R.id.load_fragment)
     toFragmentNaviButton = findViewById(R.id.load_fragment_navi)
     toFragmentNaviButton2 = findViewById(R.id.load_fragment_navi2)
+    toTabLayoutButton = findViewById(R.id.load_tabLayout)
   }
 
   fun initListener(){
@@ -48,6 +51,11 @@ class MainActivity: AppCompatActivity() {
 
     toFragmentNaviButton2.setOnClickListener {
       val intent = Intent(this, ViewPagerFragmentNaviActivity2::class.java)
+      startActivity(intent)
+    }
+
+    toTabLayoutButton.setOnClickListener {
+      val intent = Intent(this, ViewPagerTabLayoutActivity::class.java)
       startActivity(intent)
     }
   }

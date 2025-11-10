@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.viewpagerpractice.R
+import com.example.viewpagerpractice.interfaces.BadgeInterface
 import com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity2
 
 
@@ -55,8 +56,8 @@ class BadgeFragment : Fragment() {
     btn2 = view.findViewById(R.id.btn2)
     btn3 = view.findViewById(R.id.btn3)
 
-    btn1.setOnClickListener { (activity as? ViewPagerFragmentNaviActivity2)?.addBadge(R.id.menu_home,1) }
-    btn2.setOnClickListener { (activity as? ViewPagerFragmentNaviActivity2)?.addBadge(R.id.menu_list,1) }
-    btn3.setOnClickListener { (activity as? ViewPagerFragmentNaviActivity2)?.addBadge(R.id.menu_setting,1) }
+    btn1.setOnClickListener { (activity as? BadgeInterface)?.addBadge(R.id.menu_home,1) }
+    btn2.setOnClickListener { (activity as? BadgeInterface)?.addBadge(R.id.menu_list,1) }
+    btn3.setOnClickListener { (activity as? BadgeInterface)?.addBadge(R.id.menu_setting,1) }
   }
 }

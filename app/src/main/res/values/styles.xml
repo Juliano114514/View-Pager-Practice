@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BottomNavigationView 文本样式 - 激活状态 -->
+    <style name="BottomNavigationViewTextAppearanceActive">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- BottomNavigationView 文本样式 - 未激活状态 -->
+    <style name="BottomNavigationViewTextAppearanceInactive">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- BottomNavigationView 自定义样式 -->
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationViewTextAppearanceActive</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationViewTextAppearanceInactive</item>
+    </style>
+</resources>
+

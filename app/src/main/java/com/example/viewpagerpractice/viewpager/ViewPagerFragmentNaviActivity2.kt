@@ -7,11 +7,12 @@ import androidx.viewpager.widget.ViewPager
 import com.example.viewpagerpractice.R
 import com.example.viewpagerpractice.fragment.BadgeFragment
 import com.example.viewpagerpractice.fragment.BasicFragment
+import com.example.viewpagerpractice.interfaces.BadgeInterface
 import com.example.viewpagerpractice.viewpager.adapter.FragmentStateVpAdapter
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class ViewPagerFragmentNaviActivity2 : AppCompatActivity(){
+class ViewPagerFragmentNaviActivity2 : AppCompatActivity(), BadgeInterface{
 
   private val viewPager: ViewPager by lazy { findViewById(R.id.vp_navi2) }
   private val btnNavi: BottomNavigationView by lazy { findViewById(R.id.bottom_menu)}
@@ -20,7 +21,7 @@ class ViewPagerFragmentNaviActivity2 : AppCompatActivity(){
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.fragment_navi2)
+    setContentView(R.layout.view_pager_navi2)
 
     initData()
     initView()
@@ -80,12 +81,12 @@ class ViewPagerFragmentNaviActivity2 : AppCompatActivity(){
     }
   }
 
-  fun addBadge(ResId: Int, addCount: Int = 0){
+  override fun addBadge(ResId: Int, addCount: Int){
     var badge: BadgeDrawable = btnNavi.getOrCreateBadge(ResId)
     if(addCount > 0)badge.number = badge.number + addCount
   }
 
-  private fun removeBadge(ResId: Int){
+  override fun removeBadge(ResId: Int){
     btnNavi.removeBadge(ResId)
   }
 }

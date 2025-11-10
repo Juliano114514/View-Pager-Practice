@@ -38,12 +38,16 @@
       <activity
         android:name="com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity"
         android:theme="@style/Theme.ViewPagerPractice">
-
       </activity>
 
-      <activity android:name="com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity2"
+      <activity
+        android:name="com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity2"
         android:theme="@style/Theme.ViewPagerPractice">
+      </activity>
 
+      <activity
+        android:name="com.example.viewpagerpractice.viewpager.ViewPagerTabLayoutActivity"
+        android:theme="@style/Theme.ViewPagerPractice">
       </activity>
 
     </application>
