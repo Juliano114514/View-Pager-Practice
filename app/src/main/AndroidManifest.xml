@@ -35,6 +35,12 @@
         android:theme="@style/Theme.ViewPagerPractice">
       </activity>
 
+      <activity
+        android:name="com.example.viewpagerpractice.viewpager.ViewpagerFragmentNaviActivity"
+        android:theme="@style/Theme.ViewPagerPractice">
+
+      </activity>
+
     </application>
 
     </manifest>
