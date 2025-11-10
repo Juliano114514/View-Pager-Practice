@@ -9,7 +9,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.viewpagerpractice.R
 import com.example.viewpagerpractice.viewpager.adapter.VpAdapter
 
-class ViewpagerActivity : AppCompatActivity(){
+class ViewPagerActivity : AppCompatActivity(){
 
   private lateinit var viewPager: ViewPager
   private lateinit var mAdapter: VpAdapter
@@ -45,7 +45,7 @@ class ViewpagerActivity : AppCompatActivity(){
       override fun onPageScrolled(pos: Int, posOffset: Float, posOffsetPx: Int) {}
 
       override fun onPageSelected(pos: Int) {
-        Toast.makeText(this@ViewpagerActivity, "切换到画面${pos+1}" , Toast.LENGTH_SHORT).show()
+        Toast.makeText(this@ViewPagerActivity, "切换到画面${pos+1}" , Toast.LENGTH_SHORT).show()
       }
 
       override fun onPageScrollStateChanged(state: Int) {}

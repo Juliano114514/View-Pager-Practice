@@ -10,7 +10,7 @@ import com.example.viewpagerpractice.R
 import com.example.viewpagerpractice.fragment.BasicFragment
 import com.example.viewpagerpractice.viewpager.adapter.FragmentVpAdapter
 
-class ViewpagerFragmentNaviActivity : AppCompatActivity() {
+class ViewPagerFragmentNaviActivity : AppCompatActivity() {
 
   private val viewpager: ViewPager by lazy{ findViewById(R.id.vp_navi) }
   private lateinit var mAdapter : FragmentVpAdapter
@@ -33,6 +33,7 @@ class ViewpagerFragmentNaviActivity : AppCompatActivity() {
     initView()
     initData()
     initListener()
+    updateBar(viewpager.currentItem)
   }
 
   private fun initView(){
@@ -78,15 +79,7 @@ class ViewpagerFragmentNaviActivity : AppCompatActivity() {
       }
 
       override fun onPageSelected(pos: Int) {
-        textViews.forEachIndexed { idx, view ->
-          if(idx == pos) view.text = selectedText[idx]
-          else view.text = originText[idx]
-        }
-
-        emojiViews.forEachIndexed { idx, view ->
-          if(idx == pos) view.text = selectedEmoji[idx]
-          else view.text = originEmoji[idx]
-        }
+        updateBar(pos)
       }
 
       override fun onPageScrollStateChanged(state: Int) {
@@ -99,6 +92,18 @@ class ViewpagerFragmentNaviActivity : AppCompatActivity() {
       view.setOnClickListener {
         viewpager.setCurrentItem(idx)
       }
+    }
+  }
+
+  fun updateBar(pos: Int){
+    textViews.forEachIndexed { idx, view ->
+      if(idx == pos) view.text = selectedText[idx]
+      else view.text = originText[idx]
+    }
+
+    emojiViews.forEachIndexed { idx, view ->
+      if(idx == pos) view.text = selectedEmoji[idx]
+      else view.text = originEmoji[idx]
     }
   }
 }

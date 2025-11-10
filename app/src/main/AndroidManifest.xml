@@ -26,7 +26,7 @@
       </activity>
 
       <activity
-        android:name="com.example.viewpagerpractice.viewpager.ViewpagerActivity"
+        android:name="com.example.viewpagerpractice.viewpager.ViewPagerActivity"
         android:theme="@style/Theme.ViewPagerPractice">
       </activity>
 
@@ -36,7 +36,12 @@
       </activity>
 
       <activity
-        android:name="com.example.viewpagerpractice.viewpager.ViewpagerFragmentNaviActivity"
+        android:name="com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity"
+        android:theme="@style/Theme.ViewPagerPractice">
+
+      </activity>
+
+      <activity android:name="com.example.viewpagerpractice.viewpager.ViewPagerFragmentNaviActivity2"
         android:theme="@style/Theme.ViewPagerPractice">
 
       </activity>
